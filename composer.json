@@ -1,0 +1,22 @@
+{
+    "name": "bucorel/f2",
+    "description": "framework version 2",
+    "type": "library",
+    "license": "mit",
+    "autoload": {
+        "psr-4": {
+            "Bucorel\\F2\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Pushpendra Singh Thakur",
+            "email": "thakur@bucorel.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "twig/twig": "4.x-dev",
+        "geoip2/geoip2": "dev-main"
+    }
+}
