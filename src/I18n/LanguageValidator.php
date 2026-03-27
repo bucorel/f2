@@ -1,5 +1,5 @@
 <?php
-namespace Bucorel\Waf\Language;
+namespace Bucorel\F2\I18n;
 
 class LanguageValidator {
 
