@@ -17,7 +17,7 @@ class StatefulController extends BaseController{
 		}
 		
 		//check if this controller is for authorised users only
-		if( in_array( 'auth', $this->allowedRoles ) && isset( $_SESSION['user']['role'] ) ){
+		if( in_array( 'auth', $this->allowedRoles ) && isset( $_SESSION['user']['roles'] ) ){
 			return;
 		}
 		
