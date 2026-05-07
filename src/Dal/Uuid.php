@@ -80,5 +80,17 @@ class Uuid {
 			$uuid
 		);
 	}
+	
+	function isValidForPg(mixed $uuid): bool {
+		if (!is_string($uuid) || strlen($uuid) !== 36) {
+			return false;
+		}
+
+		// Postgres accepts any hex digit in any position as long as the format is correct.
+		// It is case-insensitive, so we use the 'i' flag.
+		$pattern = '/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i';
+
+		return preg_match($pattern, $uuid) === 1;
+	}
 }
 ?>
