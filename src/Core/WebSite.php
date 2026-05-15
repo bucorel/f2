@@ -35,7 +35,9 @@ class WebSite extends Router{
 			//echo 'showing page - '.$page;
 			$this->renderPage( $this->config['TEMPLATE_PATH'], $this->config['BASE_URL'], $route.'.html' );
 		}else{
-			echo 'page not found '.$page;
+			header( 'HTTP/1.1 404 Not Found' );
+			echo 'Not Found <b>/'.$route.'</b>';
+			exit;
 		}
 	}
 
